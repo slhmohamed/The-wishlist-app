@@ -1,0 +1,70 @@
+.details{
+    float:left;
+    width: 1153px;
+ border-style: groove; 
+ cursor: pointer;
+ 
+}
+
+
+.search-input-wrapper {
+    max-width: 480px;
+}
+.active-icon{
+    border-radius: 50%;
+   
+}
+.pos{
+align-items: center;
+
+ 
+}
+
+
+
+.mat-sidenav-container{height:100%;display:flex;flex:1 1 auto;}
+.mat-nav-list .mat-list-item{font-size:15px;}
+.nav-tool-items{display:inline-block;margin-right:13px;}
+.user-profile{margin-left:15px;cursor:pointer;}
+.hamburger{visibility:hidden !important;}
+.mat-sidenav,.mat-sidenav-content{padding:15px;}
+.mat-list-item.active{background:rgba(0, 0, 0, .04);}
+.mat-sidenav-content{padding:25px 40px 0;}
+.mat-sidenav{background-color:#F2F2F2;width:250px;}
+.header{position:sticky;position:-webkit-sticky;top:0;z-index:1000;}
+
+.hamburger{margin-top:5px;cursor:pointer;}
+.mat-radio-button,.mat-radio-group{margin-right:25px;}
+.controlers-wrapper>*{width:100%;padding:0;}
+.misc-bottom-padding{margin:8px 0 10px;}
+.misc-bottom-padding mat-label{margin-right:15px;}
+mat-radio-group mat-radio-button{margin-left:5px;}
+.button-wrapper button{margin-right:5px;}
+table.mat-table,table{width:100%;}
+.inner-wrapper{padding:15px 0 130px;width:100%;}
+.inner-wrapper mat-card{display:inline-block;margin:0 6% 0 0;vertical-align:top;width:44%;}
+.full-wrapper{width:100%;}
+.multiple-items{position:relative;}
+.multiple-items .tooltip-info{right:0;top:7px;cursor:pointer;color:#a1a7c7;position:absolute;font-size:20px;}
+body .push-right{margin-right:10px;}
+.no-data{text-align:center;padding-top:30px;color:#6c75a9;}
+.button-wrapper{margin:20px 0 0 0;}
+@media (max-width:1024px){.inner-wrapper mat-card{width:100%;}
+ .mat-sidenav-content{padding:20px 20px 0;}
+ .misc-bottom-padding mat-label{display:block;padding-bottom:10px;}
+ .mat-sidenav{width:230px;}
+ .mat-nav-list .mat-list-item{font-size:14px;}
+}
+@media (max-width:767px){.nav-tool-items{margin-right:0;} 
+ .hamburger{visibility:visible !important;}
+}
+
+table {
+    overflow-x: scroll;
+  }
+
+  img {
+    border-radius: 50%;
+    width: 30PX;
+    height : 30PX;;
+  }

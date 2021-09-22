@@ -1,0 +1,22 @@
+img{
+    float: left;    
+     margin: 0 0 0 15px;
+     WIDTH: 311PX;
+     height: 274PX;
+
+    }
+    P{
+        font-size: 20PX;
+        
+        WIDTH: 949PX;
+        text-align: justify;
+    }
+     
+    mat-icon{
+        cursor: pointer;
+    }
+
+    mat-form-field{
+        margin-top: 100PX;
+        MARGIN-LEFT: -310PX;
+    }

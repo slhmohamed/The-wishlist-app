@@ -1,0 +1,69 @@
+<mat-toolbar color="primary" class="expanded-toolbar">
+    <span>
+      <button mat-button routerLink="/"  *ngIf="!isAuthenticated"> </button>
+      <button mat-button routerLink="/Wishlist" *ngIf="isAuthenticated"> 	 <mat-icon>favorite_border</mat-icon>My wishlist </button>
+      <button mat-button routerLink="/product" *ngIf="isAuthenticated">	<mat-icon> list_alt</mat-icon>My product </button>
+ 
+    </span>
+
+ 
+ 
+    <div fxLayout="row" fxShow="false" fxShow.gt-sm>
+      <button mat-button routerLink="/" *ngIf="!isAuthenticated">
+        <mat-icon>power_settings_new</mat-icon>
+        Login
+      </button>
+
+      <button mat-button routerLink="/SignUp" *ngIf="!isAuthenticated">
+        <mat-icon>label</mat-icon>
+        Register
+      </button>
+
+      <button  mat-button *ngIf="isAuthenticated" >
+        <mat-icon>account_circle</mat-icon>
+        <mat-select>
+            <mat-option>
+                <mat-icon (click)="logout()">exit_to_app</mat-icon> Logout
+    </mat-option>
+</mat-select>
+      </button>
+    
+      <mat-select *ngIf="isAuthenticated">
+        <mat-option selected>
+          TND
+        </mat-option>
+        <mat-option>
+            USA
+          </mat-option>
+          <mat-option>
+            EUR
+          </mat-option>
+      </mat-select>
+       
+     
+    </div>
+    <button mat-button [mat-menu-trigger-for]="menu" fxHide="false" fxHide.gt-sm>
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar>
+    <mat-menu x-position="before" #menu="matMenu">
+        <button mat-menu-item  routerLink="/"  *ngIf="!isAuthenticated"> </button>
+        <button mat-menu-item  routerLink="/Wishlist" *ngIf="isAuthenticated"> 	 <mat-icon>favorite_border</mat-icon>My wishlist </button>
+        <button mat-menu-item  routerLink="/" *ngIf="isAuthenticated">	<mat-icon> list_alt</mat-icon>My product </button>
+        <button mat-menu-item  routerLink="/" *ngIf="!isAuthenticated">
+            <mat-icon>power_settings_new</mat-icon>
+            Login
+          </button>
+    
+          <button mat-menu-item  routerLink="/SignUp" *ngIf="!isAuthenticated">
+            <mat-icon>label</mat-icon>
+            Register
+          </button>
+    
+          <button  mat-menu-item  *ngIf="isAuthenticated" >
+            <mat-icon (click)="logout()">exit_to_app</mat-icon> Logout
+          </button>
+        
+        
+           
+    </mat-menu>

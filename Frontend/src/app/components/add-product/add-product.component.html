@@ -1,0 +1,104 @@
+
+
+<mat-grid-list cols="1" rowHeight="500px">
+  <mat-grid-tile>
+  
+<br>
+<form [formGroup]="formProduct" (submit)="onSubmit()"> 
+      <div class="example-container">
+        <div class="file-upload">
+          <img src="https://i.stack.imgur.com/dy62M.png" />
+          <input type="file" name="somename" formControlName="picture" (change)="selectPicture($event)"  />
+          <mat-error>
+            Required
+          </mat-error>
+          </div> 
+          <br>
+        <mat-form-field appearance="fill" class="width-35  ml-1">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name">
+          <mat-error>
+            Required
+          </mat-error>
+        </mat-form-field>
+    
+        <mat-form-field appearance="fill" class="width-40 ml-1">
+          <mat-label>Price</mat-label>
+          <input matInput formControlName="price">
+          <mat-error>
+            Required
+          </mat-error>
+        </mat-form-field>
+      
+        <mat-form-field appearance="fill" class="width-25 ml-1">
+          <mat-label>Currency</mat-label>
+       
+          <mat-select formControlName="curency">
+            
+            <mat-option value="TND">
+             TND
+            </mat-option>
+            <mat-option value="USD">
+              USD
+             </mat-option>
+             <mat-option value="EURO">
+              EURO
+             </mat-option>
+           
+          </mat-select>
+          <mat-error>
+            Required
+          </mat-error>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field appearance="fill" class="width-100  ml-1">
+          <mat-label>Description</mat-label>
+          <input matInput formControlName="description"  >
+          <mat-error>
+            Required
+          </mat-error>
+        </mat-form-field>
+        
+      
+    
+ 
+        <br><br>
+        <mat-form-field appearance="fill" class="width-50">
+          <mat-label>Wishlist</mat-label>
+          <mat-select formControlName="wishlistID" >
+            <div *ngFor="let wishlist of wishlists">
+            <mat-option [value]="wishlist._id">
+             {{wishlist.name}}
+            </mat-option>
+          </div>
+          </mat-select>
+          <mat-error>
+            Required
+          </mat-error>
+    
+        </mat-form-field>
+    
+        <mat-form-field appearance="fill" class="width-50 ml-1">
+          <mat-label>Status</mat-label>
+          <mat-select formControlName="status">
+            <mat-option value="To Buy">
+             To Buy
+            </mat-option>
+            <mat-option value="Bought">
+              Bought
+             </mat-option>
+          </mat-select>
+          <mat-error>
+            Required
+          </mat-error>
+        </mat-form-field>
+        <button style="align-items: center; flex: 3;left: 402PX;"  mat-stroked-button color="primary" (click)="closeDialog()"  >Cancel</button>
+        <button  style="align-items: center; LEFT: 427PX;"  mat-raised-button color="primary" type="submit">Done</button>
+   
+    
+     
+      </div>
+    </form>
+  </mat-grid-tile>
+  </mat-grid-list>

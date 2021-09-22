@@ -1,0 +1,43 @@
+ 
+<app-products></app-products>
+<form [formGroup]="formProduct" (submit)="submit()">
+<img  [src]="'http://localhost:3000/src/files/' +product.picture"  alt=""/>
+  <p>
+   {{product.description}}
+  </p>
+  <mat-icon style="margin-left: 700PX;color: blue;" (click)="submit()"> border_color</mat-icon> Edit <br>
+<mat-icon  (click)="deleteProduct()" style="MARGIN-LEFT:700PX; margin-top:23px;color: red;">delete_sweep</mat-icon>Delete
+   
+  <h2>Price :{{product.price}}  {{product.curency}}</h2>
+
+    
+  <mat-form-field appearance="fill" class="width-50">
+    <mat-label>Wishlist</mat-label>
+    <mat-select formControlName="wishlistID" >
+      <div *ngFor="let wishlist of wishlists">
+      <mat-option [value]="wishlist._id">
+       {{wishlist.name}}
+      </mat-option>
+    </div>
+    </mat-select>
+    <mat-error>
+      Required
+    </mat-error>
+
+  </mat-form-field>
+  <mat-form-field style="margin-left:67PX" appearance="fill" class="width-50 ml-1">
+    <mat-label>Status</mat-label>
+    <mat-select formControlName="status">
+      <mat-option value="To Buy">
+       To Buy
+      </mat-option>
+      <mat-option value="Bought">
+        Bought
+       </mat-option>
+    </mat-select>
+    <mat-error>
+      Required
+    </mat-error>
+  </mat-form-field>
+  </form>
+    

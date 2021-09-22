@@ -1,0 +1,19 @@
+.wishlist{
+    float:left;
+    height: 530PX;
+width:180px;
+ border-style: groove; ;
+ 
+}
+h6{
+    cursor: pointer;
+    margin-left: 30PX;
+    flex: 3;
+    
+
+}
+
+ button{
+     MARGIN-LEFT: -1PX;
+    WIDTH: 182PX;
+}

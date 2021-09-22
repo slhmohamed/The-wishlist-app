@@ -1,0 +1,13 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="wishlist">
+    <button  mat-stroked-button color="primary" (click)="onCreate()"><mat-icon>add</mat-icon> Add Product</button>
+    <div   *ngFor="let product of products">
+        <h6   [routerLink]="['/product-details/', product._id]" >{{product.name}}</h6>  
+    </div>
+          
+ 
+      
+    
+</div>
+ 

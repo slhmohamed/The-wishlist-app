@@ -1,0 +1,11 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="wishlist">
+    <button  mat-stroked-button color="primary" (click)="onCreate()"><mat-icon>add</mat-icon> Add wishlist</button>
+<div   *ngFor="let wishlist of wishlists">
+    <h6   [routerLink]="['/wishlist-details/', wishlist._id]" >{{wishlist.name}}</h6>  
+</div>
+      
+    
+</div>
+ 
